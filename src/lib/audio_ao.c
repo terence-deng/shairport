@@ -32,7 +32,7 @@
 #include "common.h"
 #include "audio.h"
 
-ao_device *dev = NULL;
+ao_device *ao_dev = NULL;
 
 static void help(void) {
     printf("    -d driver           set the output driver\n"
@@ -93,15 +93,15 @@ static int init(int argc, char **argv) {
     fmt.channels = 2;
     fmt.byte_format = AO_FMT_NATIVE;
 
-    dev = ao_open_live(driver, &fmt, ao_opts);
+    ao_dev = ao_open_live(driver, &fmt, ao_opts);
 
-    return dev ? 0 : 1;
+    return ao_dev ? 0 : 1;
 }
 
 static void deinit(void) {
-    if (dev)
-        ao_close(dev);
-    dev = NULL;
+    if (ao_dev)
+        ao_close(ao_dev);
+    ao_dev = NULL;
     ao_shutdown();
 }
 
@@ -111,7 +111,7 @@ static void start(int sample_rate) {
 }
 
 static void play(short buf[], int samples) {
-    ao_play(dev, (char*)buf, samples*4);
+    ao_play(ao_dev, (char*)buf, samples*4);
 }
 
 static void stop(void) {

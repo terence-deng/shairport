@@ -31,17 +31,12 @@
 #include <memory.h>
 #include <openssl/md5.h>
 #include <sys/wait.h>
-#include <getopt.h>
 #include "common.h"
 #include "daemon.h"
 #include "rtsp.h"
 #include "mdns.h"
 #include "getopt_long.h"
 #include "metadata.h"
-
-static const char *version =
-    #include "version.h"
-    ;
 
 static void log_setup();
 
@@ -272,7 +267,7 @@ void log_setup() {
 }
 
 int main(int argc, char **argv) {
-    printf("Starting Shairport %s\n", version);
+    printf("Starting Shairport %s\n", VERSION);
 
     signal_setup();
     memset(&config, 0, sizeof(config));

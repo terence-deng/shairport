@@ -32,13 +32,13 @@
 #ifdef CONFIG_SNDIO
 extern audio_output audio_sndio;
 #endif
-#ifdef CONFIG_AO
+#ifdef HAVE_LIBAO
 extern audio_output audio_ao;
 #endif
-#ifdef CONFIG_PULSE
+#ifdef HAVE_LIBPULSEAUDIO
 extern audio_output audio_pulse;
 #endif
-#ifdef CONFIG_ALSA
+#ifdef HAVE_LIBASOUND
 extern audio_output audio_alsa;
 #endif
 extern audio_output audio_dummy, audio_pipe;
@@ -47,13 +47,13 @@ static audio_output *outputs[] = {
 #ifdef CONFIG_SNDIO
     &audio_sndio,
 #endif
-#ifdef CONFIG_ALSA
+#ifdef HAVE_LIBASOUND
     &audio_alsa,
 #endif
-#ifdef CONFIG_PULSE
+#ifdef HAVE_LIBPULSEAUDIO
     &audio_pulse,
 #endif
-#ifdef CONFIG_AO
+#ifdef HAVE_LIBAO
     &audio_ao,
 #endif
     &audio_dummy,
