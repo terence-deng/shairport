@@ -1,7 +1,8 @@
 ShairPort
 ---------
 
-By [James Laird](mailto:jhl@mafipulation.org) ([announcement](http://mafipulation.org/blagoblig/2011/04/08#shairport))
+By [James Laird](http://mafipulation.org)
+
 
 What it is
 ----------
@@ -23,16 +24,19 @@ Optionally:
 
 Debian/Raspbian users can get the basics with
 ```Bash
-apt-get install libssl-dev libao-dev pulseaudio libpulse-dev libavahi-client-dev libasound2-dev autoconf automake libtool
+apt-get install libssl-dev libao-dev pulseaudio libpulse-dev \
+libavahi-client-dev libasound2-dev autoconf automake libtool
 ```
 
 BSD users can get the basics with
 ```Bash
-pkg install openssl libao pulseaudio avahi-header autoconf automake libtool gmake
+pkg install openssl libao pulseaudio avahi-header autoconf automake \
+libtool gmake
 ````
 or
 ```Bash
-pkg_add -r openssl libao pulseaudio avahi-header autoconf automake libtool gmake
+pkg_add -r openssl libao pulseaudio avahi-header autoconf automake \
+libtool gmake
 ````
 
 
@@ -62,7 +66,8 @@ gmake
 
 Alternative options for OpenBSD users
 ```Bash
-CFLAGS="-I/usr/local/include" LDFLAGS="-L/usr/local/lib" ./configure --without-alsa --with-sndio
+CFLAGS="-I/usr/local/include" LDFLAGS="-L/usr/local/lib" ./configure \
+--without-alsa --with-sndio
 ```
 
 The triangle-in-rectangle AirTunes (now AirPlay) logo will appear in the iTunes status bar of any machine on the network, or on iPod/iPhone play controls screen. Choose your access point name to start streaming to the ShairPort instance.
