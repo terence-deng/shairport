@@ -45,7 +45,8 @@ AC_ARG_WITH([pulse],
 	[with_pulse=no])
 AS_IF([test "x$with_pulse" != xno],
 	[
-	AC_CHECK_LIB([libpulse-simple],[pa_simple_new])
+	AC_CHECK_LIB([pulse],[main])
+	AC_CHECK_LIB([pulse-simple],[main])
 	AM_CONDITIONAL([WITH_PULSE], true)
 	], [
 	AM_CONDITIONAL([WITH_PULSE], false)
