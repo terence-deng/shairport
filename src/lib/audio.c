@@ -35,7 +35,7 @@ extern audio_output audio_sndio;
 #ifdef HAVE_LIBAO
 extern audio_output audio_ao;
 #endif
-#ifdef HAVE_LIBPULSE-SIMPLE
+#ifdef HAVE_LIBPULSE_SIMPLE
 extern audio_output audio_pulse;
 #endif
 #ifdef HAVE_LIBASOUND
@@ -50,7 +50,7 @@ static audio_output *outputs[] = {
 #ifdef HAVE_LIBASOUND
     &audio_alsa,
 #endif
-#ifdef HAVE_LIBPULSE-SIMPLE
+#ifdef HAVE_LIBPULSE_SIMPLE
     &audio_pulse,
 #endif
 #ifdef HAVE_LIBAO
