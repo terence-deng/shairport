@@ -1,12 +1,3 @@
-ShairPort is no longer maintained
-=========
-
-As I no longer use Shairport myself, I am no longer maintaining or supporting Shairport.
-Thanks to everyone who has contributed over the years; it's been a great experience.
-For the ongoing user, there are a great many forks and ports to choose from now, many of which are of a very high quality and well maintained.
-
-— James
-
 ShairPort
 ---------
 
@@ -31,10 +22,14 @@ Optionally:
 * avahi
 
 Debian/Raspbian users can get the basics with
-`apt-get install libssl-dev libavahi-client-dev libasound2-dev autoconf automake libtool`
+```Bash
+apt-get install libssl-dev libavahi-client-dev libasound2-dev autoconf automake libtool
+```
 
 BSD/FreeBSD users can get the basics with
-`pkg install openssl libao pulseaudio avahi-header autoconf automake libtool gmake`
+```Bash
+pkg install openssl libao pulseaudio avahi-header autoconf automake libtool gmake
+````
 
 
 
@@ -46,16 +41,16 @@ Check the [mDNS Backends] section for more information.
 
 How to get started
 -------------
-GNU/Linux users
-```
+GNU/Linux users can build an run it with
+```Bash
 ./autogen
 ./configure
 make
 ./src/shairport -a 'My Shairport Name'
 ```
 
-BSD users
-```
+BSD users can build an run it with
+```Bash
 ./autogen
 CFLAGS="-I/usr/local/include" LDFLAGS="-L/usr/local/lib" ./configure
 gmake
@@ -69,7 +64,7 @@ Audio Outputs
 Shairport supports different audio backends.
 For a list of available backends and their options, run `shairport -h`.
 Note that options are supplied to backends at the end of the commandline, separated by --, for example:
-```
+```Bash
 shairport -o ao -- -d mydriver -o setting=thing
 ```
 
