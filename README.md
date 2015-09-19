@@ -23,7 +23,7 @@ Optionally:
 
 Debian/Raspbian users can get the basics with
 ```Bash
-apt-get install libssl-dev libavahi-client-dev libasound2-dev autoconf automake libtool
+apt-get install libssl-dev libao-dev pulseaudio libpulse-dev libavahi-client-dev libasound2-dev autoconf automake libtool
 ```
 
 BSD users can get the basics with
