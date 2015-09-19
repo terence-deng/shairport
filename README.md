@@ -21,6 +21,9 @@ Build Requirements
 ------------------
 Required:
 * OpenSSL
+* autoconf
+* automake
+* libtool
 
 Optionally:
 * libao
@@ -28,7 +31,7 @@ Optionally:
 * avahi
 
 Debian/Raspbian users can get the basics with
-`apt-get install libssl-dev libavahi-client-dev libasound2-dev`
+`apt-get install libssl-dev libavahi-client-dev libasound2-dev autoconf automake libtool`
 
 
 Runtime Requirements
@@ -40,6 +43,7 @@ Check the [mDNS Backends] section for more information.
 How to get started
 -------------
 ```
+./autogen
 ./configure
 make
 ./shairport -a 'My Shairport Name'
