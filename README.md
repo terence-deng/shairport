@@ -33,6 +33,10 @@ Optionally:
 Debian/Raspbian users can get the basics with
 `apt-get install libssl-dev libavahi-client-dev libasound2-dev autoconf automake libtool`
 
+BSD/FreeBSD users can get the basics with
+`pkg install openssl libao pulseaudio avahi-header autoconf automake libtool gmake`
+
+
 
 Runtime Requirements
 --------------------
@@ -42,10 +46,19 @@ Check the [mDNS Backends] section for more information.
 
 How to get started
 -------------
+GNU/Linux users
 ```
 ./autogen
 ./configure
 make
+./shairport -a 'My Shairport Name'
+```
+
+BSD users
+```
+./autogen
+CFLAGS="-I/usr/local/include" LDFLAGS="-L/usr/local/lib" ./configure
+gmake
 ./shairport -a 'My Shairport Name'
 ```
 
