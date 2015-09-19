@@ -58,7 +58,7 @@ AC_ARG_WITH([sndio],
 	[with_sndio=no])
 AS_IF([test "x$with_sndio" != xno],
 	[
-	AC_CHECK_LIB([libsndio],[sio_open])
+	AC_CHECK_LIB([sndio],[sio_open])
 	AM_CONDITIONAL([WITH_SNDIO], true)
 	], [
 	AM_CONDITIONAL([WITH_SNDIO], false)

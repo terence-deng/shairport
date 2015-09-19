@@ -29,7 +29,7 @@
 #include "audio.h"
 #include "config.h"
 
-#ifdef HAVE_SNDIO
+#ifdef HAVE_LIBSNDIO
 extern audio_output audio_sndio;
 #endif
 #ifdef HAVE_LIBAO
@@ -44,7 +44,7 @@ extern audio_output audio_alsa;
 extern audio_output audio_dummy, audio_pipe;
 
 static audio_output *outputs[] = {
-#ifdef HAVE_SNDIO
+#ifdef HAVE_LIBSNDIO
     &audio_sndio,
 #endif
 #ifdef HAVE_LIBASOUND
