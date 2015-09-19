@@ -60,6 +60,11 @@ gmake
 ./src/shairport -a 'My Shairport Name'
 ```
 
+Alternative options for OpenBSD users
+```Bash
+CFLAGS="-I/usr/local/include" LDFLAGS="-L/usr/local/lib" ./configure --without-alsa --with-sndio
+```
+
 The triangle-in-rectangle AirTunes (now AirPlay) logo will appear in the iTunes status bar of any machine on the network, or on iPod/iPhone play controls screen. Choose your access point name to start streaming to the ShairPort instance.
 
 Audio Outputs
