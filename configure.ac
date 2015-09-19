@@ -50,6 +50,18 @@ AS_IF([test "x$with_pulse" != xno],
 	], [
 	AM_CONDITIONAL([WITH_PULSE], false)
 	])
+# SNDIO
+AC_ARG_WITH([sndio],
+	[AS_HELP_STRING([--with-sndio], [use sndio as the audio backend [default=no]])],
+	[],
+	[with_sndio=no])
+AS_IF([test "x$with_sndio" != xno],
+	[
+	AC_CHECK_LIB([libsndio],[sio_open])
+	AM_CONDITIONAL([WITH_SNDIO], true)
+	], [
+	AM_CONDITIONAL([WITH_SNDIO], false)
+	])
 
 AC_CHECK_LIB([m],[pow])
 AC_CHECK_LIB([crypto],[MD5_Init])

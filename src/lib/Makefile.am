@@ -17,6 +17,6 @@ if WITH_PULSE
 libshairport_la_SOURCES += audio_pulse.c
 endif
 
-if WITH_AO
-libshairport_la_SOURCES += audio_ao.c
+if WITH_SNDIO
+libshairport_la_SOURCES += audio_sndio.c
 endif
