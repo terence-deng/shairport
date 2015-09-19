@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([Shairport], [1.1.1], [BUG-REPORT-ADDRESS])
+AC_INIT([Shairport], [1.1.2], [BUG-REPORT-ADDRESS])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_SRCDIR([src/shairport.c])
 AC_CONFIG_HEADERS([config.h])
