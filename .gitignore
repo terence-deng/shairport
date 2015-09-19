@@ -20,7 +20,6 @@ depcomp
 install-sh
 libtool
 ltmain.sh
-m4/
 missing
 src/shairport
 stamp-h1
