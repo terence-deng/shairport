@@ -51,7 +51,7 @@ GNU/Linux users
 ./autogen
 ./configure
 make
-./shairport -a 'My Shairport Name'
+./src/shairport -a 'My Shairport Name'
 ```
 
 BSD users
@@ -59,7 +59,7 @@ BSD users
 ./autogen
 CFLAGS="-I/usr/local/include" LDFLAGS="-L/usr/local/lib" ./configure
 gmake
-./shairport -a 'My Shairport Name'
+./src/shairport -a 'My Shairport Name'
 ```
 
 The triangle-in-rectangle AirTunes (now AirPlay) logo will appear in the iTunes status bar of any machine on the network, or on iPod/iPhone play controls screen. Choose your access point name to start streaming to the ShairPort instance.
