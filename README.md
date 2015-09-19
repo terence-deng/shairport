@@ -26,11 +26,14 @@ Debian/Raspbian users can get the basics with
 apt-get install libssl-dev libavahi-client-dev libasound2-dev autoconf automake libtool
 ```
 
-BSD/FreeBSD users can get the basics with
+BSD users can get the basics with
 ```Bash
 pkg install openssl libao pulseaudio avahi-header autoconf automake libtool gmake
 ````
-
+or
+```Bash
+pkg_add -r openssl libao pulseaudio avahi-header autoconf automake libtool gmake
+````
 
 
 Runtime Requirements
