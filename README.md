@@ -46,7 +46,7 @@ How to get started
 -------------
 GNU/Linux users can build an run it with
 ```Bash
-./autogen
+./autogen.sh
 ./configure
 make
 ./src/shairport -a 'My Shairport Name'
@@ -54,7 +54,7 @@ make
 
 BSD users can build an run it with
 ```Bash
-./autogen
+./autogen.sh
 CFLAGS="-I/usr/local/include" LDFLAGS="-L/usr/local/lib" ./configure
 gmake
 ./src/shairport -a 'My Shairport Name'
