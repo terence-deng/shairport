@@ -60,7 +60,7 @@ BSD users can build an run it with
 ```Bash
 ./autogen.sh
 CFLAGS="-I/usr/local/include" LDFLAGS="-L/usr/local/lib" ./configure \
---without-alsa --with-ao --with-pulse
+--without-alsa --with-ao
 gmake
 ./src/shairport -a 'My Shairport Name'
 ```
