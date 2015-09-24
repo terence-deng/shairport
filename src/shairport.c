@@ -266,6 +266,15 @@ void log_setup() {
     }
 }
 
+void apname_md5sum(){
+    uint8_t ap_md5[16];
+    MD5_CTX ctx;
+    MD5_Init(&ctx);
+    MD5_Update(&ctx, config.apname, strlen(config.apname));
+    MD5_Final(ap_md5, &ctx);
+    memcpy(config.hw_addr, ap_md5, sizeof(config.hw_addr));
+}
+
 int main(int argc, char **argv) {
     printf("Starting %s\n", PACKAGE_STRING);
 
@@ -279,6 +288,7 @@ int main(int argc, char **argv) {
     gethostname(hostname, 100);
     config.apname = malloc(20 + 100);
     snprintf(config.apname, 20 + 100, "%s on %s", PACKAGE_NAME, hostname);
+    apname_md5sum();
 
     // parse arguments into config
     int audio_arg = parse_options(argc, argv);
@@ -299,13 +309,6 @@ int main(int argc, char **argv) {
         die("Invalid audio output specified!");
     }
     config.output->init(argc-audio_arg, argv+audio_arg);
-
-    uint8_t ap_md5[16];
-    MD5_CTX ctx;
-    MD5_Init(&ctx);
-    MD5_Update(&ctx, config.apname, strlen(config.apname));
-    MD5_Final(ap_md5, &ctx);
-    memcpy(config.hw_addr, ap_md5, sizeof(config.hw_addr));
 
     if (config.meta_dir)
         metadata_open();
