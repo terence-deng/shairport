@@ -9,6 +9,7 @@ Makefile
 *.a
 *.o
 *.orig
+*.tar.*
 aclocal.m4
 autom4te.cache
 autoscan*.log
@@ -22,4 +23,5 @@ libtool
 ltmain.sh
 missing
 src/shairport
+src/shairport.exe
 stamp-h1
