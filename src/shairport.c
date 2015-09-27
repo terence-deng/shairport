@@ -31,12 +31,12 @@
 #include <memory.h>
 #include <openssl/md5.h>
 #include <sys/wait.h>
-#include "common.h"
-#include "daemon.h"
-#include "rtsp.h"
-#include "mdns.h"
-#include "getopt_long.h"
-#include "metadata.h"
+#include "lib/common.h"
+#include "lib/daemon.h"
+#include "lib/rtsp.h"
+#include "lib/mdns.h"
+#include "lib/getopt_long.h"
+#include "lib/metadata.h"
 
 static void log_setup();
 
